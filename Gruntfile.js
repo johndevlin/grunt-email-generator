@@ -61,18 +61,49 @@ module.exports = function(grunt) {
 					spawn: false,
 				}
 			}
-		}
+		},
 		
-		// imagemin: {
-		// 	dynamic: {
-		// 		files: [{
-		// 			expand: true,
-		// 			cwd: 'assets/development/img/',
-		// 			src: ['**/*.{png,jpg,gif}'],
-		// 			dest: 'assets/production/img/'
-		// 		}]
-		// 	}
-		// },
+		imagemin: {
+			dynamic: {
+				files: [{
+					expand: true,
+					cwd: 'assets/development/img/',
+					src: ['**/*.{png,jpg,gif}'],
+					dest: 'assets/production/img/'
+				}]
+			}
+		},
+		
+		nodemailer: {
+
+			options: {
+				transport: {
+					type: 'SMTP',
+					options: {
+						service: 'Gmail',
+						auth: {
+							user: 'email@gmail.com',
+							pass: 'password'
+						}
+					}
+				},
+				
+				message: {
+					subject: 'A test e-mail',
+					text: 'Plain text message',
+					html: '<body><h1>HTML custom message</h1></body>',
+				},
+				
+				recipients: [{
+					email: 'john@mammoth.tv',
+					name: 'John D'
+				}]
+			},
+
+			external: {
+				src: ['production/email.html']
+			}
+		}
 
 	});
 
@@ -82,13 +113,16 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-premailer');
 	grunt.loadNpmTasks('assemble');
+	grunt.loadNpmTasks('grunt-nodemailer');
 
 	// 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
 	grunt.registerTask('default', ['sass', 'assemble', 'premailer',]);
 	
 	grunt.registerTask('build', ['sass', 'assemble', 'premailer',]);
 	
-	grunt.registerTask('watch', ['watch']);
+	grunt.registerTask('send', ['nodemailer',]);
+	
+	// grunt.registerTask('watch', ['watch', ]);
 	
 	// grunt.registerTask('img', ['imagemin']);
 
