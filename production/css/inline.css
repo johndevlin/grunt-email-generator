@@ -1,0 +1,45 @@
+/*************
+	Variables
+*/
+/***************
+	Main Styles
+*/
+html,
+body,
+.background-table {
+  background-color: #eeeeee;
+}
+
+.background-table {
+  color: #333333;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.main-content {
+  background-color: white;
+}
+
+.paragraph, img {
+  color: #666666;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #008374;
+  text-decoration: underline;
+}
+
+/***********************
+	Inline Reset
+	------------
+	
+	All of the below 
+	CSS will be added 
+	to inline to every 
+	element / class
+
+*/
+img {
+  display: block;
+  margin: 0;
+}
