@@ -8,8 +8,8 @@ An email generator that uses Grunt to add your (S)CSS inline.
 
 ## ToDos
 
-* [] Fix Grunt watch
-* [] Fix Grunt imagemin
+* [ ] Fix Grunt watch
+* [ ] Fix Grunt imagemin
 
 
 
