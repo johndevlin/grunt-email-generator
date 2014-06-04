@@ -1,0 +1,42 @@
+
+@import "variables"; 
+
+
+/***************
+	Main Styles
+*/
+
+
+// Email background colour
+
+html,
+body,
+.background-table {
+	background-color: $light-grey;
+}
+
+.background-table {
+	color: $dark-grey; 
+	font-family: $base-font;
+}
+
+.main-content {
+	background-color: $white;
+}
+
+.paragraph {
+	color: $paragraph-color;
+	font-family: $base-font;
+	font-size: $base-font-size;
+}
+
+a {
+	color: $link-color;
+	text-decoration: underline;
+}
+
+
+
+
+@import "resets"; 
+@import "modules"; 
