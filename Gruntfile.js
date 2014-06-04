@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 					style: 'expanded'
 				},
 				files: {
-					'production/css/inline.css': 'development/scss/inline/inline.scss'
+					'production/css/inline.css': 'development/scss/inline.scss'
 				}
 			} 
 		},
