@@ -6,6 +6,14 @@ An email generator that uses Grunt to add your (S)CSS inline.
 
 
 
+## Requirements 
+
+1. [Install Node.js](http://nodejs.org/)
+2. [Grunt](http://gruntjs.com/)
+3. [Premailer](https://github.com/premailer/premailer)
+
+
+
 ## ToDos
 
 * [ ] Fix Grunt watch

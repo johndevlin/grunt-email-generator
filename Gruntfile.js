@@ -21,7 +21,7 @@ module.exports = function(grunt) {
 				flatten: true
 			},
 			pages: {
-				src: ['development/emails/*.hbs'],
+				src: ['development/layouts/*.hbs'],
 				dest: 'production/'
 			}
 		},
@@ -48,14 +48,14 @@ module.exports = function(grunt) {
 				}
 			},
 			assemble: {
-				files: ['development/layouts/*'],
+				files: ['development/wrapper/*'],
 				tasks: ['assemble'],
 				options: {
 					spawn: false,
 				}
 			},
 			premailer: {
-				files: ['development/emails/*'],
+				files: ['development/layouts/*'],
 				tasks: ['premailer'],
 				options: {
 					spawn: false,
