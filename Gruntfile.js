@@ -17,7 +17,7 @@ module.exports = function(grunt) {
 		
 		assemble: {
 			options: {
-				layoutdir: 'development/layouts',
+				layoutdir: 'development/wrapper',
 				flatten: true
 			},
 			pages: {
